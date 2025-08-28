@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import "./ScreenshotForm.css";
 
 function ScreenshotForm() {
@@ -20,7 +20,7 @@ function ScreenshotForm() {
 
     try {
       // Call backend API
-      const response = await fetch("http://localhost:4000/api/screenshot", {
+      const response = await fetch(`${process.env.PORT}/api/screenshot`, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ url }),
