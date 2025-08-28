@@ -20,7 +20,7 @@ function ScreenshotForm() {
 
     try {
       // Call backend API
-      const response = await fetch(`${process.env.PORT}/api/screenshot`, {
+      const response = await fetch(`${process.env.REACT_APP_BACKEND_URL}/api/screenshot`, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ url }),
